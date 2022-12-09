@@ -1,14 +1,6 @@
 if __name__ == "__main__":
-
     import time
 
-
-    # In[ ]:
-
-
-    #### import requests 
-    import twilio
-    from twilio.rest import Client
     def to_f(kelvin):
             f = ((float(kelvin)-273.15)* (9/5) + 32)
             return int(f)
@@ -24,7 +16,7 @@ if __name__ == "__main__":
             weather_result =requests.get(url).json()
             kelvin = weather_result['main']['temp']
             F_temp = to_f(kelvin)
-            account_sid = 'AC06da32eeccde42ee47506741c18c9090'
+            account_sid = 'AC06da32eeccde42ee4750
             auth_token = 'cca4ac1da3533e0deb811d1bccb96082'
             client = Client(account_sid, auth_token)
             message = client.messages.create(
@@ -36,20 +28,4 @@ if __name__ == "__main__":
             i+=1
             if i == 4:
                 break
-
-    weatherbot(0.25)
-
-
-    # weatherbot(5)
-
-    # In[22]:
-
-
-    weatherbot(0.25)
-
-
-    # In[ ]:
-
-
-
-
+         weatherbot(0.25)
